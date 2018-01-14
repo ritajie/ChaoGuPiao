@@ -8,27 +8,27 @@ def get_nameid():
     """return 字典 key=name value=id 类型str"""
     name_id = {}
 
-    filepath1 = R"C:\Users\15517\PycharmProjects\股票信息\上交所A股代码.xlsx"
-    filepath2 = R"C:\Users\15517\PycharmProjects\股票信息\深交所上市公司代码.xlsx"
+    filepath1 = R"上交所A股代码.xlsx"
+    filepath2 = R"深交所上市公司代码.xlsx"
     filepath_xiaoyang = "小样.xlsx"
-    file1 = xlrd.open_workbook(filepath_xiaoyang)
+    file1 = xlrd.open_workbook(filepath1)
     sheet1 = file1.sheets()[0]
     rows1 = sheet1.nrows  # 行数
-    # file2 = xlrd.open_workbook(filepath2)
-    # sheet2 = file2.sheets()[0]
-    # rows2 = sheet2.nrows  # 行数
+    file2 = xlrd.open_workbook(filepath2)
+    sheet2 = file2.sheets()[0]
+    rows2 = sheet2.nrows  # 行数
 
     for row in range(1, rows1):
         name = sheet1.cell(row, 0).value.strip()
         id = str(int(sheet1.cell(row, 1).value))
         name_id[name] = id
 
-    # for row in range(1, rows2):
-    #     id = sheet2.cell(row, 0).value
-    #     name = sheet2.cell(row, 1).value
-    #     if len(name) < 2:  # 有空行
-    #         continue
-    #     ans[name] = id
+    for row in range(1, rows2):
+        id = sheet2.cell(row, 0).value
+        name = sheet2.cell(row, 1).value
+        if len(name) < 2:  # 有空行
+            continue
+        ans[name] = id
 
     return name_id
 
