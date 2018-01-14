@@ -10,7 +10,7 @@ def get_nameid():
 
     filepath1 = R"上交所A股代码.xlsx"
     filepath2 = R"深交所上市公司代码.xlsx"
-    filepath_xiaoyang = "小样.xlsx"
+#   filepath_xiaoyang = "小样.xlsx"
     file1 = xlrd.open_workbook(filepath1)
     sheet1 = file1.sheets()[0]
     rows1 = sheet1.nrows  # 行数
