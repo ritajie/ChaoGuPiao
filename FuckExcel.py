@@ -28,7 +28,7 @@ def get_nameid():
         name = sheet2.cell(row, 1).value
         if len(name) < 2:  # 有空行
             continue
-        ans[name] = id
+        name_id[name] = id
 
     return name_id
 
