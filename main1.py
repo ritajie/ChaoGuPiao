@@ -2,6 +2,8 @@
 爬取同花顺股票网的信息
 2018/1/8
 路小鹿
+
+"这是新+的"
 """
 import time
 import threading
