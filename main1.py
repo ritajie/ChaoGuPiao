@@ -3,7 +3,7 @@
 2018/1/8
 路小鹿
 
-"这是新+的"
+this is third 
 """
 import time
 import threading
